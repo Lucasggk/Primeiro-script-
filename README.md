@@ -8,3 +8,40 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "click (apenas click)"
+})
+
+Tab:AddButton({
+	Name = "teste de funcionamento!",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "sim,",
+	Content = "se aparecer isso funciona",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "alternar sim/não"
+})
+
+
+
+Tab:AddToggle({
+	Name = "assinando teste",
+	Default = false,
+	Callback = function()
+		OrionLib:MakeNotification({
+	Name = "sim,",
+	Content = "se aparecer isso funciona",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+	end    
+})
+
+
