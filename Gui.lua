@@ -60,4 +60,15 @@ Tab:AddToggle({
 
 
 
+
 OrionLib:Init()
+
+task.wait(2)
+for _, v in pairs(game:GetService("CoreGui"):GetDescendants()) do
+    if v:IsA("TextLabel") and v.Text == "Lucas | Dead Rails GUI" then
+        if v.Parent:IsA("Frame") then
+            v.Parent.Draggable = true
+            v.Parent.Active = true
+        end
+    end
+end
