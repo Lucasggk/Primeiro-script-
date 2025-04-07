@@ -44,6 +44,22 @@ Tab:AddToggle({
 	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "deslizar"
+})
+
+Tab:AddSlider({
+	Name = "Velocidade",
+	Min = 16,
+	Max = 60,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "speed",
+	Callback = function(value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+	end    
+})
 
 
 
